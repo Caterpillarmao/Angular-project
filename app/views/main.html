@@ -1,0 +1,37 @@
+<div class="row">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" style="padding-top: 10px">
+                    <img alt="Brand" src="images/yeoman.png" style="width:45px">
+                </a>
+            </div>
+            <p class="navbar-text navbar-right" ng-controller="rootCtrl">Hello: {{userName}}&nbsp&nbsp {{date | date:'yyyy-MM-dd'}}</p>
+            <ul class="nav nav-pills" style="padding-top: 5px">
+                <li role="presentation" ui-sref-active="selected"><a href="#">Home</a></li>
+                <li role="presentation" ui-sref-active="selected"><a href="#">Optimization</a></li>
+                <li role="presentation" ui-sref-active="selected"><a href="#">Hello World</a></li>
+                <li role="presentation" ui-sref-active="selected"><a href="#">Hello World</a></li>
+                <li role="presentation" ui-sref-active="selected"><a ui-sref="root.viewContract">Rule Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="row">
+    <div class="col-xs-2">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li ui-sref-active="selected"><a ui-sref="root.viewContract"><span class="glyphicon glyphicon-star"></span> View Contracts</a></li>
+                <li ui-sref-active="selected"><a ui-sref="root.manageContract"><span class="glyphicon glyphicon-th-large"></span> Manage Contracts</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-pushpin"></span> Function Corps</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-paperclip"></span> Groups</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-tag"></span> Users</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-xs-10">
+        <ui-view></ui-view>
+    </div>
+</div>
+</div>
